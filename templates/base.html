@@ -1,0 +1,143 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="shortcut icon" type="images/png" href="{%  static 'omabata/images/favicon.ico' %}"/>
+	<link href="{% static 'omabata/css/style.css' %}" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'omabata/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'omabata/css/bootstrap-select.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">	
+	<link href="{% static 'css/ui.css' %}" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="css/responsive.css" rel="stylesheet" media="only screen and (max-width: 1200px)" />
+
+    <title>{% block head_title %}{% endblock %} Omabata </title>
+    
+    <!-- jQuery -->
+<script src="js/jquery-2.0.0.min.js" type="text/javascript"></script>
+
+<!-- Bootstrap4 files-->
+<script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+
+<!-- Font awesome 5 -->
+<link href="fonts/fontawesome/css/fontawesome-all.min.css" type="text/css" rel="stylesheet">
+
+<!-- plugin: owl carousel  -->
+<link href="plugins/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="plugins/owlcarousel/assets/owl.theme.default.css" rel="stylesheet">
+<script src="plugins/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- custom style -->
+<link href="css/ui.css" rel="stylesheet" type="text/css"/>
+<link href="css/responsive.css" rel="stylesheet" media="only screen and (max-width: 1200px)" />
+
+<!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+
+  </head>
+  <header>
+  	<div class="container">
+    
+		{% include 'navbar.html' %}
+		
+	</div> <!-- Header container -->
+	
+</header>
+  <body style="background-color: rgb(230, 225, 225);">
+<div>
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endfor %}
+    {% endif %}
+</div>
+      <div class='container-fluid'>
+         {% block content %}
+            {% endblock %}
+      </div>
+
+  </body>
+
+<!-- ========================= FOOTER ========================= -->
+<footer class="section-footer bg-dark" style="color: white; padding-top: 15px; margin-top: 15px;">
+	<div class="container">
+		<section class="footer-top padding-top">
+			<div class="row">
+				<aside class="col-sm-3 col-md-3 white"> 
+					<h5 class="title">Customer Services</h5>
+					<ul class="list-unstyled">
+						<li> <a href="/contact" style="color: white;">Help center</a></li>
+						<li> <a href="#" style="color: white;">Money refund</a></li>
+						<li> <a href="#" style="color: white;">Terms and Policy</a></li>
+						<li> <a href="#" style="color: white;">Open dispute</a></li>
+					</ul>
+				</aside>
+				
+				<aside class="col-sm-3  col-md-3 white">
+					<h5 class="title">About</h5>
+					<ul class="list-unstyled">
+						<li> <a href="/about-us" style="color: white;"> Our history </a></li>
+						<!--<li> <a href="#" style="color: white;"> How to buy </a></li>
+						<li> <a href="#" style="color: white;"> Delivery and payment </a></li>-->
+						<li> <a href="/contact" style="color: white;"> Advertise </a></li>
+						<li> <a href="/contact" style="color: white;"> Partnership </a></li>
+					</ul>
+				</aside>
+				<aside class="col-sm-3">
+					<article class="white">
+						<h5 class="title">Contact</h5>
+						<p>
+							<strong>Phone: </strong> +234-906-425-2814 <br> 
+						</p>
+						<p>
+							<strong>Email: </strong> info@omabata.com <br> 
+						</p>
+
+						 <div class="btn-group white">
+						    <a class="btn btn-facebook" title="Facebook" target="_blank" href="#"><i class="fab fa-facebook-f  fa-fw"></i></a>
+						    <a class="btn btn-instagram" title="Instagram" target="_blank" href="#"><i class="fab fa-instagram  fa-fw"></i></a>
+						    <a class="btn btn-youtube" title="Youtube" target="_blank" href="#"><i class="fab fa-youtube  fa-fw"></i></a>
+						    <a class="btn btn-twitter" title="Twitter" target="_blank" href="#"><i class="fab fa-twitter  fa-fw"></i></a>
+						</div>
+					</article>
+				</aside>
+				<aside class="col-sm-3  col-md-3 white">
+					<p class="text-md-right text-white-50">
+							Copyright &copy  <br>
+						<a href="/" class="text-white-50">Omabata Online Market</a>
+					</p>
+				</aside>
+			</div> <!-- row.// -->
+			<br> 
+		</section>
+		<section class="footer-bottom row border-top-white">
+			<div class="col-sm-6">
+				
+			</div>
+		</section> <!-- //footer-top -->
+	</div><!-- //container -->
+</footer>
+<!-- ========================= FOOTER END // ========================= -->
+
+
+  <!--
+  <footer class="footer-addy">
+        <a> 19, Surulere, Lagos, Nigeria.   |   |       +234-906-425-2814     |    |   info@omabata.com </a>
+  </footer>
+-->
+     {% include 'js.html' %}
+</html>

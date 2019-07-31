@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load static %}
+
+
+
+{% block content %}
+
+<body>
+
+<div class="container" style="margin-top: 15px; margin-bottom: 15px;">
+    <div class="card">
+    <div class="row no-gutters">
+    <aside class="col-sm-6" border-right style="margin: 15px 15px 15px 15px;">
+        <h3 class="heading" style="text-align: center; background-color: dodgerblue; color: white; border-radius: 10px; padding: 5px 0px 5px 0px;">COMPANY OVERVIEW</h3>
+        <p>Omabata.com is a fast rising Nigeria's largest online market. We launched in July 2019 and our mission is to become the engine of commerce and trade in Africa.</p>
+        <p>We serve a retail customer base that continues to grow exponentially, offering products that span various categories including Agriculture, Food, Phones, Computers, Clothing, Shoes, Home Appliances, Books, healthcare, Baby Products, personal care and much more.</p>
+        <p>Our range of services are designed to ensure optimum levels of convenience and customer satisfaction with the retail process; these services include our lowest price guarantee, 7-day free return policy*, order delivery-tracking, dedicated customer service support and many other premium services.</p>
+        <p>As we continue to expand the market, our scope of offerings will increase in variety, simplicity and convenience; join us and enjoy the increasing benefits.</p>
+        <p>We are highly customer-centric and are committed towards finding innovative ways of improving our customers' shopping experience with us; so give us some feedback on help@omabata.com. For any press related questions, kindly send us an email at press@omabata.com.</p>
+        <p>Thank you and we hope you enjoy your experience with us.</p>
+    </aside>
+    <aside class="col-sm-4" style="margin: 70px 15px 15px 5px;">
+        <img src="{% static 'omabata/images/abt.jpg' %}" style="width: 500px; border: 1px slid rgba(0,0,0,.2); box-shadow: 3px 10px 15px 3px rgba(0, 0, 0, 0.2);" alt="omabata online market" title="omabata online market">
+    </aside>
+    </div>
+    </div> 
+</div> <!-- Body container -->
+
+<div class="container" style="margin-top: 75px; margin-bottom: 55px;">
+    <div class="card" style="padding: 40px 40px 40px 40px;">
+        <h3 class="heading" style="text-align: center; background-color: dodgerblue; color: white; border-radius: 10px; padding: 5px 0px 5px 0px;">WHY CHOOSE US</h3>
+        <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#home">Vision</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menu1">Mission</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menu2">Values</a>
+        </li>
+    </ul>
+    
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane container active" id="home" style="margin-top: 25px;"><p>To be a powerful force for the Economic Growth of Africa and to connect Africans with each other and the rest of the world through Technology & Commerce.</p></div>
+        <div class="tab-pane container fade" id="menu1" style="margin-top: 25px;"><p>To be the Engine of Commerce & Trade in Africa.</p></div>
+        <div class="tab-pane container fade" id="menu2" style="margin-top: 25px;">
+            <p><strong>The customer sits on the throne</strong>  - Satisfied customers are essential to our success.</p>
+            <p><strong>Hardwork</strong>  -  We embrace hard work. We understand that it is only through pushing ourselves beyond our limits of comfort that we become better as individuals and as a company.</p>
+            <p><strong>Honour & Integrity</strong> - We are open, honest and trustworthy in all our dealings.</p>
+            <p><strong>Teamwork & Sacrifice</strong> - We work together disregarding personal interests to meet the needs of our customers and to build a stronger company.
+            </p>
+            <p><strong>Passion</strong> - We are passionate about our brand and our mission.</p>
+            <p><strong>Constant Evolution</strong> - We always question the norm looking for opportunities to birth new ideas. As individuals we embrace flexibility and rapid change.</p>
+        </div>
+    </div>
+</div>
+</div> <!-- Body container -->
+
+</body>
+
+
+{% endblock %}

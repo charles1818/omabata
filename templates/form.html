@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<header>
+
+    <figure class="home-image">
+        <img src="{% static 'try_django/images/contactus.jpg' %}">
+    </figure>
+
+    {% include 'navbar.html' %}
+
+</header>
+
+{% if title %}
+    <h1>{{ title }}</h1>
+{% endif %}
+
+<p class="contactform">
+<form method='POST' action='.' enctype='multipart/form-data'> {% csrf_token %}
+    {{ form.as_p }}
+    <button type='submit'>Send</button>
+</form> 
+</p>
+
+<p>We will get back to you as soon as possible</p>
+
+
+{% endblock %}
